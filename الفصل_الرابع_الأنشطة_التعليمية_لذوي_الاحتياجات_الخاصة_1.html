@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل الرابع: الأنشطة التعليمية لذوي الاحتياجات الخاصة</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yellow: #FFD93D;
+    --orange: #FF6B35;
+    --blue: #4ECDC4;
+    --purple: #A855F7;
+    --green: #22C55E;
+    --pink: #EC4899;
+    --red: #EF4444;
+    --dark: #1E1B4B;
+    --light: #F8FAFC;
+    --card-radius: 20px;
+    --shadow: 0 8px 32px rgba(30,27,75,0.13);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #FFF7ED 0%, #EEF2FF 50%, #F0FFF4 100%);
+    min-height: 100vh;
+    color: var(--dark);
+  }
+  .hero {
+    background: linear-gradient(135deg, #7C3AED, #EC4899, #F59E0B);
+    padding: 48px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%);
+  }
+  .hero-emoji { font-size: 72px; display: block; margin-bottom: 12px; position: relative; z-index: 1; }
+  .hero h1 {
+    font-size: 2.4rem; font-weight: 900; color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    position: relative; z-index: 1; line-height: 1.3;
+  }
+  .hero p {
+    color: rgba(255,255,255,0.9); font-size: 1.1rem;
+    margin-top: 10px; position: relative; z-index: 1;
+  }
+  .hero-badges {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    justify-content: center; margin-top: 20px; position: relative; z-index: 1;
+  }
+  .hero-badge {
+    background: rgba(255,255,255,0.2); color: #fff;
+    padding: 6px 18px; border-radius: 50px; font-size: 0.9rem;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    font-weight: 600;
+  }
+  .nav-tabs {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 20px 24px; background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    position: sticky; top: 0; z-index: 100;
+    justify-content: center;
+  }
+  .nav-tab {
+    padding: 10px 18px; border-radius: 50px; border: 2px solid #e5e7eb;
+    background: #f9fafb; cursor: pointer; font-family: inherit;
+    font-size: 0.88rem; font-weight: 700; transition: all 0.25s;
+    color: #4B5563;
+  }
+  .nav-tab:hover, .nav-tab.active {
+    background: var(--dark); color: #fff; border-color: var(--dark);
+    transform: translateY(-2px); box-shadow: 0 4px 16px rgba(30,27,75,0.2);
+  }
+  .section {
+    max-width: 1100px; margin: 0 auto; padding: 40px 20px;
+    display: none;
+  }
+  .section.active { display: block; }
+  .section-title {
+    font-size: 1.9rem; font-weight: 900; margin-bottom: 28px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .section-emoji { font-size: 2.2rem; }
+  .cards-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; margin-bottom: 32px;
+  }
+  .card {
+    background: #fff; border-radius: var(--card-radius);
+    padding: 24px; box-shadow: var(--shadow);
+    border-top: 5px solid var(--yellow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(30,27,75,0.15); }
+  .card.blue { border-top-color: var(--blue); }
+  .card.purple { border-top-color: var(--purple); }
+  .card.green { border-top-color: var(--green); }
+  .card.pink { border-top-color: var(--pink); }
+  .card.orange { border-top-color: var(--orange); }
+  .card h3 {
+    font-size: 1.15rem; font-weight: 800; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .card p { font-size: 0.95rem; line-height: 1.8; color: #374151; }
+  .card ul { padding-right: 20px; }
+  .card ul li { font-size: 0.95rem; line-height: 1.9; color: #374151; margin-bottom: 4px; }
+  .big-card {
+    background: #fff; border-radius: var(--card-radius);
+    padding: 28px 32px; box-shadow: var(--shadow); margin-bottom: 24px;
+  }
+  .activity-section {
+    border-radius: var(--card-radius); padding: 28px;
+    margin-bottom: 24px; position: relative; overflow: hidden;
+  }
+  .activity-section.sport { background: linear-gradient(135deg, #FFF7ED, #FFEDD5); border: 2px solid #FB923C; }
+  .activity-section.art { background: linear-gradient(135deg, #FDF4FF, #FAE8FF); border: 2px solid #D946EF; }
+  .activity-section.music { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border: 2px solid #22C55E; }
+  .activity-section.lang { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 2px solid #3B82F6; }
+  .activity-section.social { background: linear-gradient(135deg, #FFFBEB, #FEF3C7); border: 2px solid #F59E0B; }
+  .activity-section.science { background: linear-gradient(135deg, #F0FDFA, #CCFBF1); border: 2px solid #14B8A6; }
+  .activity-section.culture { background: linear-gradient(135deg, #FFF1F2, #FFE4E6); border: 2px solid #F43F5E; }
+  .activity-section.politics { background: linear-gradient(135deg, #F5F3FF, #EDE9FE); border: 2px solid #8B5CF6; }
+  .activity-title {
+    font-size: 1.4rem; font-weight: 900; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .adapt-btn {
+    background: linear-gradient(135deg, #7C3AED, #A855F7);
+    color: #fff; border: none; padding: 12px 22px;
+    border-radius: 50px; cursor: pointer; font-family: inherit;
+    font-size: 0.95rem; font-weight: 700; margin-top: 16px;
+    transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px;
+  }
+  .adapt-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.35); }
+  .adapt-panel {
+    display: none; margin-top: 16px;
+    background: rgba(255,255,255,0.85); border-radius: 16px;
+    padding: 20px; border: 1.5px solid rgba(124,58,237,0.3);
+  }
+  .adapt-panel.open { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  .disability-tabs {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+  }
+  .dtab {
+    padding: 7px 16px; border-radius: 50px; border: 2px solid #e5e7eb;
+    background: #f9fafb; cursor: pointer; font-family: inherit;
+    font-size: 0.85rem; font-weight: 700; transition: all 0.2s;
+    color: #4B5563;
+  }
+  .dtab.active { background: #7C3AED; color: #fff; border-color: #7C3AED; }
+  .dtab-content { display: none; }
+  .dtab-content.active {
+    display: block; font-size: 0.95rem; line-height: 1.85;
+    color: #374151; animation: fadeIn 0.25s;
+  }
+  .steps-train {
+    display: flex; flex-direction: column; gap: 0;
+    position: relative;
+  }
+  .steps-train::before {
+    content: ''; position: absolute;
+    right: 30px; top: 40px; bottom: 40px;
+    width: 3px; background: linear-gradient(to bottom, #7C3AED, #EC4899, #F59E0B, #22C55E);
+    border-radius: 4px;
+  }
+  .step-item {
+    display: flex; gap: 20px; align-items: flex-start;
+    margin-bottom: 20px; cursor: pointer;
+    background: #fff; border-radius: 16px; padding: 20px 20px 20px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border: 2px solid #e5e7eb; transition: all 0.25s;
+    position: relative; z-index: 1;
+  }
+  .step-item:hover { border-color: #7C3AED; transform: translateX(-4px); }
+  .step-item.open { border-color: #7C3AED; background: linear-gradient(135deg, #F5F3FF, #fff); }
+  .step-num {
+    min-width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; font-weight: 900; flex-shrink: 0;
+  }
+  .step-num.s1 { background: #EDE9FE; color: #7C3AED; }
+  .step-num.s2 { background: #FCE7F3; color: #DB2777; }
+  .step-num.s3 { background: #FEF3C7; color: #D97706; }
+  .step-num.s4 { background: #DCFCE7; color: #16A34A; }
+  .step-body { flex: 1; }
+  .step-title { font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; }
+  .step-subtitle { font-size: 0.88rem; color: #6B7280; }
+  .step-detail {
+    display: none; margin-top: 14px; font-size: 0.95rem;
+    line-height: 1.85; color: #374151;
+    border-top: 1.5px solid #e5e7eb; padding-top: 14px;
+  }
+  .step-detail.open { display: block; animation: fadeIn 0.3s; }
+  .step-detail ul { padding-right: 20px; }
+  .step-detail ul li { margin-bottom: 6px; }
+  .inspector-game {
+    background: #fff; border-radius: var(--card-radius);
+    padding: 28px; box-shadow: var(--shadow); margin-bottom: 24px;
+  }
+  .criteria-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+    margin-bottom: 24px;
+  }
+  .criteria-card {
+    background: #F9FAFB; border-radius: 16px; padding: 18px;
+    border: 2px solid #E5E7EB; text-align: center; cursor: pointer;
+    transition: all 0.25s;
+  }
+  .criteria-card:hover { border-color: var(--blue); transform: translateY(-3px); }
+  .criteria-card .c-icon { font-size: 2.2rem; margin-bottom: 8px; }
+  .criteria-card h4 { font-size: 0.9rem; font-weight: 800; margin-bottom: 6px; }
+  .criteria-card p { font-size: 0.82rem; color: #6B7280; line-height: 1.6; }
+  .quiz-wrap { max-width: 800px; margin: 0 auto; }
+  .quiz-q {
+    background: #fff; border-radius: var(--card-radius);
+    padding: 28px; box-shadow: var(--shadow); margin-bottom: 24px;
+    border-right: 6px solid #7C3AED;
+  }
+  .q-label {
+    font-size: 0.85rem; font-weight: 700; color: #7C3AED;
+    margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;
+  }
+  .q-text { font-size: 1.08rem; font-weight: 700; margin-bottom: 18px; line-height: 1.6; }
+  .q-options { display: flex; flex-direction: column; gap: 10px; }
+  .q-opt {
+    padding: 13px 18px; border-radius: 12px; border: 2px solid #E5E7EB;
+    background: #F9FAFB; cursor: pointer; font-family: inherit;
+    font-size: 0.95rem; text-align: right; transition: all 0.2s;
+    font-weight: 500;
+  }
+  .q-opt:hover:not(.answered) { border-color: #7C3AED; background: #F5F3FF; }
+  .q-opt.correct { background: #DCFCE7 !important; border-color: #22C55E !important; color: #15803D; font-weight: 700; }
+  .q-opt.wrong { background: #FEE2E2 !important; border-color: #EF4444 !important; color: #B91C1C; font-weight: 700; }
+  .q-opt.show-correct { background: #DCFCE7 !important; border-color: #22C55E !important; color: #15803D; }
+  .feedback-box {
+    display: none; margin-top: 16px; padding: 18px; border-radius: 14px;
+    font-size: 0.95rem; line-height: 1.8; font-weight: 500;
+  }
+  .feedback-box.correct { background: #F0FDF4; border: 2px solid #22C55E; color: #166534; }
+  .feedback-box.wrong { background: #FFF1F2; border: 2px solid #F43F5E; color: #9F1239; }
+  .feedback-box.open { display: block; animation: fadeIn 0.3s; }
+  .tf-options { display: flex; gap: 12px; margin-top: 14px; }
+  .tf-btn {
+    flex: 1; padding: 13px; border-radius: 12px; border: 2px solid #E5E7EB;
+    background: #F9FAFB; cursor: pointer; font-family: inherit;
+    font-size: 1rem; font-weight: 700; transition: all 0.2s;
+  }
+  .tf-btn.true-btn { color: #15803D; border-color: #86EFAC; }
+  .tf-btn.false-btn { color: #B91C1C; border-color: #FCA5A5; }
+  .tf-btn:hover:not(.answered) { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+  .tf-btn.correct { background: #DCFCE7; border-color: #22C55E; }
+  .tf-btn.wrong { background: #FEE2E2; border-color: #EF4444; }
+  .score-box {
+    background: linear-gradient(135deg, #7C3AED, #A855F7);
+    color: #fff; border-radius: var(--card-radius);
+    padding: 32px; text-align: center; margin-top: 28px;
+    display: none;
+  }
+  .score-box h2 { font-size: 2rem; font-weight: 900; margin-bottom: 8px; }
+  .score-box p { font-size: 1.1rem; opacity: 0.9; }
+  .compare-table {
+    width: 100%; border-collapse: collapse; margin: 24px 0;
+    border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);
+  }
+  .compare-table th {
+    padding: 16px; text-align: center; font-size: 1rem;
+    font-weight: 800;
+  }
+  .compare-table th:first-child { background: #7C3AED; color: #fff; }
+  .compare-table th:nth-child(2) { background: #3B82F6; color: #fff; }
+  .compare-table th:nth-child(3) { background: #22C55E; color: #fff; }
+  .compare-table td {
+    padding: 13px 16px; border: 1px solid #E5E7EB;
+    font-size: 0.92rem; line-height: 1.7;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #F9FAFB; }
+  .compare-table td:first-child { background: #EDE9FE; font-weight: 700; color: #5B21B6; }
+  .info-banner {
+    background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
+    border: 2px solid #F59E0B; border-radius: 16px;
+    padding: 20px 24px; margin-bottom: 24px;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .info-banner .ban-icon { font-size: 2rem; flex-shrink: 0; }
+  .info-banner p { font-size: 0.97rem; line-height: 1.8; color: #374151; }
+  .tag {
+    display: inline-block; padding: 4px 14px; border-radius: 50px;
+    font-size: 0.82rem; font-weight: 700; margin: 3px;
+  }
+  .tag.yellow { background: #FEF3C7; color: #92400E; }
+  .tag.blue { background: #DBEAFE; color: #1E40AF; }
+  .tag.green { background: #DCFCE7; color: #166534; }
+  .tag.purple { background: #EDE9FE; color: #5B21B6; }
+  .tag.pink { background: #FCE7F3; color: #9D174D; }
+  .tag.orange { background: #FFEDD5; color: #9A3412; }
+  .progress-bar-wrap {
+    background: #E5E7EB; border-radius: 50px; height: 10px;
+    overflow: hidden; margin: 12px 0;
+  }
+  .progress-bar {
+    height: 100%; border-radius: 50px;
+    background: linear-gradient(90deg, #7C3AED, #EC4899);
+    transition: width 0.5s;
+  }
+  .standards-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; margin-top: 20px;
+  }
+  .standard-card {
+    background: #fff; border-radius: 18px; padding: 22px;
+    box-shadow: var(--shadow); border-top: 5px solid;
+    transition: transform 0.2s;
+  }
+  .standard-card:hover { transform: translateY(-4px); }
+  .standard-card:nth-child(1) { border-top-color: #7C3AED; }
+  .standard-card:nth-child(2) { border-top-color: #3B82F6; }
+  .standard-card:nth-child(3) { border-top-color: #22C55E; }
+  .standard-card:nth-child(4) { border-top-color: #F59E0B; }
+  .standard-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 14px; }
+  .standard-card ul { padding-right: 18px; }
+  .standard-card ul li { font-size: 0.88rem; line-height: 1.85; color: #374151; margin-bottom: 4px; }
+  .roles-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px; margin-top: 20px;
+  }
+  .role-card {
+    background: #fff; border-radius: 16px; padding: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08); text-align: center;
+    border: 2px solid #e5e7eb; transition: all 0.2s; cursor: pointer;
+  }
+  .role-card:hover { border-color: #7C3AED; transform: translateY(-3px); }
+  .role-card.open { border-color: #7C3AED; background: #F5F3FF; }
+  .role-icon { font-size: 2.5rem; margin-bottom: 10px; }
+  .role-card h4 { font-size: 1rem; font-weight: 800; margin-bottom: 8px; }
+  .role-detail { display: none; margin-top: 12px; font-size: 0.88rem; line-height: 1.75; color: #374151; text-align: right; }
+  .role-detail.open { display: block; animation: fadeIn 0.3s; }
+  .tech-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 16px; }
+  .tech-card {
+    background: linear-gradient(135deg, #F5F3FF, #fff);
+    border: 2px solid #DDD6FE; border-radius: 14px; padding: 18px;
+    text-align: center; transition: all 0.2s; cursor: pointer;
+  }
+  .tech-card:hover { transform: translateY(-3px); border-color: #7C3AED; box-shadow: 0 8px 24px rgba(124,58,237,0.15); }
+  .tech-card .t-icon { font-size: 2.2rem; margin-bottom: 8px; }
+  .tech-card h4 { font-size: 0.92rem; font-weight: 800; color: #5B21B6; margin-bottom: 6px; }
+  .tech-card p { font-size: 0.82rem; color: #6B7280; line-height: 1.6; }
+  .quiz-reset-btn {
+    background: linear-gradient(135deg, #F59E0B, #EF4444);
+    color: #fff; border: none; padding: 14px 32px; border-radius: 50px;
+    cursor: pointer; font-family: inherit; font-size: 1rem; font-weight: 800;
+    margin-top: 20px; display: block; width: 100%; transition: all 0.25s;
+  }
+  .quiz-reset-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.35); }
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 1.7rem; }
+    .section-title { font-size: 1.4rem; }
+    .steps-train::before { right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="hero-emoji">🎓</span>
+  <h1>الفصل الرابع<br>الأنشطة التعليمية لذوي الاحتياجات الخاصة</h1>
+  <p>أ.د/ سماح عبد الفتاح مرزوق — التدريب الميداني في التربية الخاصة</p>
+  <div class="hero-badges">
+    <span class="hero-badge">🎨 تفاعلي 100%</span>
+    <span class="hero-badge">🧩 شامل للفصل كاملاً</span>
+    <span class="hero-badge">📝 امتحان محاكاة</span>
+    <span class="hero-badge">🏆 معايير قومية</span>
+  </div>
+</div>
+
+<div class="nav-tabs">
+  <button class="nav-tab active" onclick="showSection('s1')">🎪 المفاهيم التأسيسية</button>
+  <button class="nav-tab" onclick="showSection('s2')">🎨 موسوعة الأنشطة</button>
+  <button class="nav-tab" onclick="showSection('s3')">🏗️ تصنيفات الأنشطة</button>
+  <button class="nav-tab" onclick="showSection('s4')">⚙️ الوسائل والتقنيات</button>
+  <button class="nav-tab" onclick="showSection('s5')">⏰ دورة تنفيذ النشاط</button>
+  <button class="nav-tab" onclick="showSection('s6')">📏 المعايير القومية</button>
+  <button class="nav-tab" onclick="showSection('s7')">💥 امتحان الفاينال</button>
+</div>
+
+<!-- ===== SECTION 1: مفاهيم تأسيسية ===== -->
+<div class="section active" id="s1">
+  <div class="section-title">
+    <span class="section-emoji">🎪</span>
+    المرحلة 1: المفاهيم التأسيسية للأنشطة التعليمية
+  </div>
+
+  <div class="info-banner">
+    <span class="ban-icon">💡</span>
+    <p><strong>تعريف النشاط التعليمي:</strong> هو الممارسات التعليمية التي يؤديها المتعلمون داخل بيئة الروضة وخارجها كجزء من عملية التعلم المقصودة بإشراف المعلمة، بقصد بناء الخبرات وإكتساب المهارات اللازمة في المجالات المعرفية والحس حركية والوجدانية والاجتماعية.</p>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card">
+      <h3>🎯 مفهوم النشاط (Activity)</h3>
+      <p><strong>لغةً:</strong> مصطلح عام يشير إلى أي عمل هادف يقوم به الفرد، ويعني الممارسة الصادقة لعمل من الأعمال.</p>
+      <br>
+      <p><strong>اصطلاحاً:</strong> مواقف تعليمية شاملة يشارك فيها المتعلم طواعيةً وعن قصد لإشباع رغباته وميوله، وتحقيق أهداف تعليمية مرغوبة.</p>
+    </div>
+    <div class="card blue">
+      <h3>📚 النشاط كركن من أركان المنهج</h3>
+      <p>الأنشطة التعليمية تمثل <strong>الركن الرابع</strong> من أركان المنهج الأربعة:</p>
+      <ul>
+        <li>🎯 <strong>الأهداف:</strong> لماذا نعلم؟</li>
+        <li>📖 <strong>المحتوى:</strong> ماذا نعلم؟</li>
+        <li>🎪 <strong>الأنشطة:</strong> كيف نعلم وكيف نتعلم؟</li>
+        <li>📊 <strong>التقويم:</strong> هل تحققت الأهداف؟</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>🧠 الأسس النفسية والتربوية</h3>
+      <ul>
+        <li>✅ النشاط الذاتي والمشاركة الإيجابية للمتعلم</li>
+        <li>✅ استخدام المالحظة والفروض والقياس</li>
+        <li>✅ الوصول للمعلومات بالنفس تحت إشراف المعلم</li>
+        <li>✅ رفع مستوى إرادة الفرد لنفسه</li>
+        <li>✅ تنمية القدرة على التحليل والبلورة والفهم</li>
+        <li>✅ تحويل التعليم إلى شراكة بين المعلم والمتعلم</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>🌐 الأسس الاجتماعية للأنشطة</h3>
+      <ul>
+        <li>🤝 إيجاد التكيف الاجتماعي بين المجتمع المدرسي والمحلي</li>
+        <li>🏅 ترسيخ القيم والمعتقدات الدينية والاجتماعية</li>
+        <li>🏋️ تدريب المتعلمين على العلاقات الاجتماعية</li>
+        <li>🗳️ تنمية الاتجاهات الديمقراطية</li>
+        <li>🛡️ تأكيد روح الانتماء للوطن والدفاع عنه</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="big-card">
+    <h2 style="font-size:1.4rem; font-weight:900; margin-bottom:20px;">🎯 الأهداف الكاملة للأنشطة التعليمية (12 هدفاً)</h2>
+    <div class="cards-grid">
+      <div style="background:#F5F3FF; border-radius:14px; padding:16px;">
+        <div class="tag purple">1</div><div class="tag blue">2</div><div class="tag green">3</div>
+        <ul style="padding-right:18px; margin-top:12px;">
+          <li>المساعدة على التربية المتكاملة</li>
+          <li>تعميق مفاهيم التربية وإكساب عادات إيجابية</li>
+          <li>إيجاد التكيف الاجتماعي وإشراك المتعلمين في تنظيم الأنشطة</li>
+        </ul>
+      </div>
+      <div style="background:#F0FDF4; border-radius:14px; padding:16px;">
+        <div class="tag green">4</div><div class="tag yellow">5</div><div class="tag orange">6</div>
+        <ul style="padding-right:18px; margin-top:12px;">
+          <li>ترسيخ القيم والمعتقدات الدينية والاجتماعية</li>
+          <li>تأكيد روح الانتماء للوطن والتضحية في سبيله</li>
+          <li>توجيه المتعلمين لاكتشاف قدراتهم وميولهم وتنميتها</li>
+        </ul>
+      </div>
+      <div style="background:#FFF7ED; border-radius:14px; padding:16px;">
+        <div class="tag orange">7</div><div class="tag pink">8</div><div class="tag blue">9</div>
+        <ul style="padding-right:18px; margin-top:12px;">
+          <li>إتاحة الفرصة للاتصال بالبيئة والتفاعل معها</li>
+          <li>التدريب على الأسلوب العلمي والبحث والابتكار</li>
+          <li>استثمار أوقات الفراغ لاستمرار النمو السوي</li>
+        </ul>
+      </div>
+      <div style="background:#FFF1F2; border-radius:14px; padding:16px;">
+        <div class="tag pink">10</div><div class="tag purple">11</div><div class="tag green">12</div>
+        <ul style="padding-right:18px; margin-top:12px;">
+          <li>تنمية روح التعاون بين المتعلمين</li>
+          <li>تدريبهم على حب العمل وأداء الواجب</li>
+          <li>التدريب على العلاقات الاجتماعية وتنمية الاتجاهات الديمقراطية</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-card" style="background: linear-gradient(135deg, #F5F3FF, #fff);">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:16px;">🔄 وظائف الأنشطة التعليمية الثلاث الأساسية</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>🤝 الوظيفة الاجتماعية</h3>
+        <p>الطابع الجماعي للأنشطة يتيح العمل التعاوني ويساعد على:<br>• تكوين الصداقات<br>• التخلص من الانطواء والخجل<br>• تعميق مبدأ الشورى<br>• احترام آراء الآخرين وتقبل النقد</p>
+      </div>
+      <div class="card blue">
+        <h3>📖 الوظيفة التربوية</h3>
+        <p>الأنشطة الل-صفية مكملة للعملية التعليمية تحقق:<br>• تنمية المهارات المتعددة<br>• البحث العلمي<br>• الاعتماد على النفس<br>• اكتشاف المواهب</p>
+      </div>
+      <div class="card green">
+        <h3>🧠 الوظيفة النفسية</h3>
+        <p>إكساب اتجاهات إيجابية مرغوبة من خلال:<br>• استثارة الدافعية<br>• قتل الملل والروتين<br>• تحسين التفاعل الإيجابي<br>• تحسين العملية التعليمية</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 2: موسوعة الأنشطة ===== -->
+<div class="section" id="s2">
+  <div class="section-title">
+    <span class="section-emoji">🎨</span>
+    المرحلة 2: موسوعة ورش الأنشطة التعليمية وتكييفها
+  </div>
+
+  <!-- نشاط لغوي -->
+  <div class="activity-section lang">
+    <div class="activity-title">🗣️ الأنشطة اللغوية</div>
+    <p style="margin-bottom:14px; line-height:1.8;">هي كافة أنواع الأعمال والأنشطة التعليمية الصفية وغير الصفية التي تدعم تعلم الموضوعات اللغوية، وتنمية مهارات التحدث والاستماع وإعداد القراءة والكتابة.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+      <span class="tag blue">📚 قراءة الكتب</span>
+      <span class="tag blue">📰 الصحافة المدرسية</span>
+      <span class="tag blue">🎭 تمثيل الأدوار</span>
+      <span class="tag blue">🎮 الألعاب اللغوية</span>
+      <span class="tag blue">🧩 حل الألغاز</span>
+      <span class="tag blue">🎤 إلقاء الخطب</span>
+      <span class="tag blue">🏆 المسابقات اللغوية</span>
+      <span class="tag blue">🎧 الاستماع للأشرطة</span>
+      <span class="tag blue">💻 برمجيات الكمبيوتر</span>
+      <span class="tag blue">🌐 مواقع الإنترنت</span>
+    </div>
+    <button class="adapt-btn" onclick="toggleAdapt(this)">🔄 كيف نُكيّف هذا النشاط لكل إعاقة؟</button>
+    <div class="adapt-panel">
+      <div class="disability-tabs">
+        <button class="dtab active" onclick="showDtab(this,'lang')">🧠 إعاقة عقلية</button>
+        <button class="dtab" onclick="showDtab(this,'lang')">👂 إعاقة سمعية</button>
+        <button class="dtab" onclick="showDtab(this,'lang')">👁️ إعاقة بصرية</button>
+        <button class="dtab" onclick="showDtab(this,'lang')">🧩 توحد</button>
+        <button class="dtab" onclick="showDtab(this,'lang')">📖 صعوبات التعلم</button>
+      </div>
+      <div class="dtab-content active" data-group="lang">
+        <strong>🧠 الإعاقة العقلية:</strong> استخدام جمل قصيرة بسيطة، صور مدعومة للكلمات، تكرار الكلمات مع التعزيز الفوري، قصص مصورة مبسطة، الألعاب اللغوية بخطوات تدريجية جداً. التركيز على المفردات الوظيفية اليومية كالطعام والملابس والأسرة.
+      </div>
+      <div class="dtab-content" data-group="lang">
+        <strong>👂 الإعاقة السمعية:</strong> الاعتماد على لغة الإشارة، البطاقات المصورة، الكتابة المكثفة، قراءة الشفاه مع التحدث ببطء، استخدام الفيديو المدعوم بترجمة، الأنشطة القرائية والكتابية بشكل أساسي بدل الاستماع.
+      </div>
+      <div class="dtab-content" data-group="lang">
+        <strong>👁️ الإعاقة البصرية:</strong> الاعتماد على الأشرطة الصوتية والمواد المسموعة، الكتابة بطريقة برايل، التعلم السمعي المكثف، قراءة النصوص بصوتٍ عالٍ، الوصف اللفظي التفصيلي، برامج النطق الحاسوبي.
+      </div>
+      <div class="dtab-content" data-group="lang">
+        <strong>🧩 التوحد:</strong> الجداول البصرية والبطاقات المصورة (PECS)، الجمل الاجتماعية، تعلم الكلمات في سياق وظيفي، تجنب الثرثرة الاجتماعية، التكرار المنظم، استخدام الاهتمامات الخاصة للطفل كمحفز لغوي.
+      </div>
+      <div class="dtab-content" data-group="lang">
+        <strong>📖 صعوبات التعلم:</strong> الخط الكبير والواضح، تقسيم القراءة لمقاطع قصيرة، الاستماع قبل القراءة، تقنيات التدريس متعددة الحواس، الألعاب الفونولوجية، تجنب الضغط الزمني.
+      </div>
+    </div>
+  </div>
+
+  <!-- نشاط علمي -->
+  <div class="activity-section science">
+    <div class="activity-title">🔬 الأنشطة العلمية</div>
+    <p style="margin-bottom:14px; line-height:1.8;">مصطلح يشير إلى كافة أنواع الأنشطة التعليمية الصفية وغير الصفية التي تدعم تدريس وتعلم الموضوعات العملية والبحث والتنقيب في مجالات العلوم. تنمي روح البحث وأسلوب التفكير العلمي والإبداعي.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+      <span class="tag green">🧪 تجارب معلمية</span>
+      <span class="tag green">🔭 عروض علمية</span>
+      <span class="tag green">📊 بحوث علمية</span>
+      <span class="tag green">🏆 معارض علمية</span>
+      <span class="tag green">🦋 جمع عينات</span>
+      <span class="tag green">🐝 تربية الحشرات المفيدة</span>
+      <span class="tag green">🌿 تربية النباتات</span>
+      <span class="tag green">🏭 زيارة مصانع</span>
+    </div>
+    <button class="adapt-btn" onclick="toggleAdapt(this)">🔄 كيف نُكيّف هذا النشاط لكل إعاقة؟</button>
+    <div class="adapt-panel">
+      <div class="disability-tabs">
+        <button class="dtab active" onclick="showDtab(this,'sci')">🧠 إعاقة عقلية</button>
+        <button class="dtab" onclick="showDtab(this,'sci')">👂 إعاقة سمعية</button>
+        <button class="dtab" onclick="showDtab(this,'sci')">👁️ إعاقة بصرية</button>
+        <button class="dtab" onclick="showDtab(this,'sci')">🧩 توحد</button>
+        <button class="dtab" onclick="showDtab(this,'sci')">📖 صعوبات التعلم</button>
+      </div>
+      <div class="dtab-content active" data-group="sci">
+        <strong>🧠 الإعاقة العقلية:</strong> تجارب بسيطة جداً ذات نتائج فورية مرئية (تلوين الماء، زراعة بذرة)، خطوات محدودة ومصورة، التركيز على المشاهدة الحسية المباشرة، التكرار للتعزيز، تجنب التجارب ذات المواد الخطرة.
+      </div>
+      <div class="dtab-content" data-group="sci">
+        <strong>👂 الإعاقة السمعية:</strong> التجارب البصرية المرئية مثالية لهم، استخدام الفيديو المشروح، البطاقات الإجرائية المصورة، تشجيع الملاحظة الدقيقة والتسجيل الكتابي، الاهتمام بالتجارب ذات النتائج المرئية الواضحة.
+      </div>
+      <div class="dtab-content" data-group="sci">
+        <strong>👁️ الإعاقة البصرية:</strong> التجارب التي تعتمد على اللمس والشم والسمع، نماذج ثلاثية الأبعاد محسوسة، وصف صوتي تفصيلي للظواهر، تجارب آمنة يمكن تناولها باليد، العينات الطبيعية الملموسة (أوراق، تربة، حبوب).
+      </div>
+      <div class="dtab-content" data-group="sci">
+        <strong>🧩 التوحد:</strong> استغلال الاهتمامات التقنية الخاصة، روتين ثابت لخطوات التجربة، بيئة هادئة خالية من المشتتات، جداول بصرية للخطوات، تجنب الأصوات المفاجئة، منح وقت كافٍ للاستكشاف المستقل.
+      </div>
+      <div class="dtab-content" data-group="sci">
+        <strong>📖 صعوبات التعلم:</strong> ورقة الإجراءات بالخط الكبير، تقسيم التجربة لأجزاء صغيرة، الجمع بين التعلم البصري والحركي، السماح بتدوين الملاحظات بالرسم، تقليل عبء الكتابة.
+      </div>
+    </div>
+  </div>
+
+  <!-- نشاط فني -->
+  <div class="activity-section art">
+    <div class="activity-title">🎨 الأنشطة الفنية والتشكيلية</div>
+    <p style="margin-bottom:14px; line-height:1.8;">هي كافة الأعمال والأفعال التعليمية الصفية وغير الصفية التي تدعم تدريس وتعلم الموضوعات الفنية. تتيح فرص ممارسة ألوان الفنون وتبرز الميول والمواهب الفنية للمتعلمين.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+      <span class="tag pink">🖌️ الرسم والتلوين</span>
+      <span class="tag pink">🏺 النحت والصلصال</span>
+      <span class="tag pink">✂️ القص واللصق</span>
+      <span class="tag pink">📸 التصوير</span>
+      <span class="tag pink">🎭 التمثيل المسرحي</span>
+      <span class="tag pink">🎪 الفنون الشعبية</span>
+    </div>
+    <button class="adapt-btn" onclick="toggleAdapt(this)">🔄 كيف نُكيّف هذا النشاط لكل إعاقة؟</button>
+    <div class="adapt-panel">
+      <div class="disability-tabs">
+        <button class="dtab active" onclick="showDtab(this,'art')">🧠 إعاقة عقلية</button>
+        <button class="dtab" onclick="showDtab(this,'art')">👂 إعاقة سمعية</button>
+        <button class="dtab" onclick="showDtab(this,'art')">👁️ إعاقة بصرية</button>
+        <button class="dtab" onclick="showDtab(this,'art')">🧩 توحد</button>
+        <button class="dtab" onclick="showDtab(this,'art')">📖 صعوبات التعلم</button>
+      </div>
+      <div class="dtab-content active" data-group="art">
+        <strong>🧠 الإعاقة العقلية:</strong> أدوات بسيطة وآمنة، فرش عريضة سهلة الإمساك، ألوان قليلة وواضحة، قوالب جاهزة للتلوين داخلها، الصلصال لتنمية المهارات الحركية الدقيقة، تعزيز أي إنتاج بصرف النظر عن الجودة.
+      </div>
+      <div class="dtab-content" data-group="art">
+        <strong>👂 الإعاقة السمعية:</strong> الأنشطة الفنية البصرية هي الأنسب لهم على الإطلاق! التعبير الفني يعوض عن التعبير اللفظي، تشجيعهم على التعبير عن مشاعرهم بالرسم، معارض الأعمال الفنية تبني ثقتهم.
+      </div>
+      <div class="dtab-content" data-group="art">
+        <strong>👁️ الإعاقة البصرية:</strong> النحت الثلاثي الأبعاد والصلصال مثالي، الطباعة باللمس، الرسم بالأصابع على الرمل، الموزاييك اللمسي، استخدام المواد ذات الملمس المختلف (حبوب، أقمشة، خشب).
+      </div>
+      <div class="dtab-content" data-group="art">
+        <strong>🧩 التوحد:</strong> الرسم الحر تحت إشراف بسيط يقلل القلق، تجنب الأنشطة الجماعية في البداية، الألوان الهادئة (أزرق/أخضر) أفضل، الأنشطة الفردية المنظمة، احترام الاهتمامات البصرية الخاصة.
+      </div>
+      <div class="dtab-content" data-group="art">
+        <strong>📖 صعوبات التعلم:</strong> الأنشطة الفنية تعزز الثقة بالنفس، التعبير الحر دون تقييد بالأساليب الأكاديمية، استخدام اللون والخط كوسيلة تعلم للحروف، لا ضغط على الدقة والكمال.
+      </div>
+    </div>
+  </div>
+
+  <!-- نشاط موسيقي -->
+  <div class="activity-section music">
+    <div class="activity-title">🎵 الأنشطة الموسيقية والإيقاعية</div>
+    <p style="margin-bottom:14px; line-height:1.8;">تتمثل في النشاط الموسيقي والتربية الفنية والمسرح والفنون الشعبية. تتيح للمتعلمين فرص ممارسة ألوان الفنون من عزف وأناشيد ورسم وتدريب على الإلقاء والتمثيل والأداء.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+      <span class="tag green">🎶 الأناشيد والأغاني</span>
+      <span class="tag green">🥁 الإيقاع والطبل</span>
+      <span class="tag green">🎸 العزف على الآلات</span>
+      <span class="tag green">💃 التعبير الحركي</span>
+      <span class="tag green">👂 التمييز السمعي</span>
+    </div>
+    <button class="adapt-btn" onclick="toggleAdapt(this)">🔄 كيف نُكيّف هذا النشاط لكل إعاقة؟</button>
+    <div class="adapt-panel">
+      <div class="disability-tabs">
+        <button class="dtab active" onclick="showDtab(this,'mus')">🧠 إعاقة عقلية</button>
+        <button class="dtab" onclick="showDtab(this,'mus')">👂 إعاقة سمعية</button>
+        <button class="dtab" onclick="showDtab(this,'mus')">👁️ إعاقة بصرية</button>
+        <button class="dtab" onclick="showDtab(this,'mus')">🧩 توحد</button>
+        <button class="dtab" onclick="showDtab(this,'mus')">📖 صعوبات التعلم</button>
+      </div>
+      <div class="dtab-content active" data-group="mus">
+        <strong>🧠 الإعاقة العقلية:</strong> أغانٍ بسيطة ذات كلمات قليلة متكررة، الإيقاع باليد والطبل يسهل التعلم، الموسيقى كعلاج (موسيقى العلاج)، ربط الأنشطة الحركية بالأغاني، تعزيز الحفظ الموسيقي للمفاهيم.
+      </div>
+      <div class="dtab-content" data-group="mus">
+        <strong>👂 الإعاقة السمعية:</strong> إحساس الاهتزاز بالطبول والآلات الكبيرة، التعبير الحركي الإيقاعي المرئي، لغة الإشارة الموسيقية، الأنشطة الإيقاعية التي تعتمد على الإحساس بالإيقاع وليس السمع فقط.
+      </div>
+      <div class="dtab-content" data-group="mus">
+        <strong>👁️ الإعاقة البصرية:</strong> الموسيقى مثالية لهم! التعلم السمعي الكامل، العزف بالحفظ، الغناء الجماعي، الاستماع لأنواع الموسيقى وتحليلها سمعياً، تطوير الذاكرة الموسيقية.
+      </div>
+      <div class="dtab-content" data-group="mus">
+        <strong>🧩 التوحد:</strong> الموسيقى أداة علاجية ممتازة لتقليل القلق، الأغاني المنظمة تساعد على الروتين، استخدام الموسيقى كمعزز، الأناشيد التعليمية للمهارات الاجتماعية، تجنب الأصوات الحادة المفاجئة.
+      </div>
+      <div class="dtab-content" data-group="mus">
+        <strong>📖 صعوبات التعلم:</strong> الأغاني الأبجدية والرياضية تعزز الحفظ، الإيقاع يساعد على تعلم القراءة، تنسيق الحركة مع الإيقاع يطور التآزر، التعلم الموسيقي يعزز الذاكرة العاملة.
+      </div>
+    </div>
+  </div>
+
+  <!-- نشاط رياضي -->
+  <div class="activity-section sport">
+    <div class="activity-title">⚽ الأنشطة الرياضية والحركية</div>
+    <p style="margin-bottom:14px; line-height:1.8;">وهي كافة الأعمال والأفعال التعليمية التي تدعم تعليم الموضوعات الرياضية وتعلمها في مجالات الألعاب الرياضية والمفاهيم والمهارات الحركية التي تنميها المعلمة.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+      <span class="tag orange">🏃 ألعاب الحركة الكبرى</span>
+      <span class="tag orange">✋ التآزر البصري الحركي</span>
+      <span class="tag orange">⚖️ التوازن والتنسيق</span>
+      <span class="tag orange">🏆 الألعاب الجماعية</span>
+      <span class="tag orange">🧘 تمارين الاسترخاء</span>
+    </div>
+    <button class="adapt-btn" onclick="toggleAdapt(this)">🔄 كيف نُكيّف هذا النشاط لكل إعاقة؟</button>
+    <div class="adapt-panel">
+      <div class="disability-tabs">
+        <button class="dtab active" onclick="showDtab(this,'spt')">🧠 إعاقة عقلية</button>
+        <button class="dtab" onclick="showDtab(this,'spt')">👂 إعاقة سمعية</button>
+        <button class="dtab" onclick="showDtab(this,'spt')">👁️ إعاقة بصرية</button>
+        <button class="dtab" onclick="showDtab(this,'spt')">🧩 توحد</button>
+        <button class="dtab" onclick="showDtab(this,'spt')">📖 صعوبات التعلم</button>
+      </div>
+      <div class="dtab-content active" data-group="spt">
+        <strong>🧠 الإعاقة العقلية:</strong> قواعد بسيطة جداً، حركات واضحة ومتكررة، التقليد الحركي المباشر، بيئة آمنة مع إزالة العوائق، الألعاب الحركية الغنائية (بالتزامن مع الأغاني)، المكافآت والتعزيز الفوري.
+      </div>
+      <div class="dtab-content" data-group="spt">
+        <strong>👂 الإعاقة السمعية:</strong> استخدام الإشارات البصرية بدل الصافرة، الأضواء الإشارية، الإشارات اليدوية الواضحة، الألعاب التي لا تعتمد على التعليمات اللفظية، التواصل البصري المستمر.
+      </div>
+      <div class="dtab-content" data-group="spt">
+        <strong>👁️ الإعaقة البصرية:</strong> الكرات التي تصدر صوتاً، الحواجز اللمسية، التوجيه اليدوي، ملاعب محدودة المساحة مع حواف آمنة، شريك مرشد في الألعاب، الوصف الصوتي للحركات.
+      </div>
+      <div class="dtab-content" data-group="spt">
+        <strong>🧩 التوحد:</strong> تجنب الاتصال الجسدي المفاجئ، الأنشطة الفردية أولاً ثم الثنائية، السباحة ممتازة (ضغط حسي منظم)، روتين رياضي ثابت، تجنب الأصوات العالية، الأنشطة التي تعتمد على الاستقلالية.
+      </div>
+      <div class="dtab-content" data-group="spt">
+        <strong>📖 صعوبات التعلم:</strong> الحركة تعزز التعلم الأكاديمي، الفواصل الحركية بين أوقات الدراسة، الألعاب التي تتضمن أرقاماً وحروفاً، التنسيق الحركي يرتبط بتحسن القراءة والكتابة.
+      </div>
+    </div>
+  </div>
+
+  <!-- نشاط اجتماعي -->
+  <div class="activity-section social">
+    <div class="activity-title">🤝 الأنشطة الاجتماعية</div>
+    <p style="margin-bottom:14px; line-height:1.8;">تشمل الأنشطة الجماعية والرحلات والزيارات والجمعية التعاونية والنظام والنظافة والصحة وحماية البيئة. تتيح للمتعلم فرص التكيف الاجتماعي وتكسبه القيم والاتجاهات وأنماط السلوك المرغوبة.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+      <span class="tag yellow">🚌 الرحلات والزيارات</span>
+      <span class="tag yellow">🏫 الأنشطة الجماعية</span>
+      <span class="tag yellow">🌿 حماية البيئة</span>
+      <span class="tag yellow">🧹 النظام والنظافة</span>
+      <span class="tag yellow">❤️ الصحة</span>
+    </div>
+    <button class="adapt-btn" onclick="toggleAdapt(this)">🔄 كيف نُكيّف هذا النشاط لكل إعاقة؟</button>
+    <div class="adapt-panel">
+      <div class="disability-tabs">
+        <button class="dtab active" onclick="showDtab(this,'soc')">🧠 إعاقة عقلية</button>
+        <button class="dtab" onclick="showDtab(this,'soc')">👂 إعاقة سمعية</button>
+        <button class="dtab" onclick="showDtab(this,'soc')">👁️ إعاقة بصرية</button>
+        <button class="dtab" onclick="showDtab(this,'soc')">🧩 توحد</button>
+        <button class="dtab" onclick="showDtab(this,'soc')">📖 صعوبات التعلم</button>
+      </div>
+      <div class="dtab-content active" data-group="soc">
+        <strong>🧠 الإعاقة العقلية:</strong> مجموعات صغيرة جداً (2-3 أطفال)، أدوار محددة وواضحة لكل فرد، تدريب مسبق على قواعد الدور، مراقبة مستمرة، استخدام اللعب الرمزي البسيط لتعلم المهارات الاجتماعية.
+      </div>
+      <div class="dtab-content" data-group="soc">
+        <strong>👂 الإعاقة السمعية:</strong> مجموعات تشمل أطفالاً سامعين ومعاقين سمعياً، تعليم أفراد المجموعة مبادئ لغة الإشارة، الأنشطة التعاونية التي تعتمد على الفعل لا الكلام، تعزيز التواصل البصري.
+      </div>
+      <div class="dtab-content" data-group="soc">
+        <strong>👁️ الإعاقة البصرية:</strong> شريك مرشد في كل نشاط، الوصف الصوتي للأحداث الاجتماعية، الرحلات مع مرشد بصري، أنشطة تعتمد على الحس السمعي واللمسي مع الجماعة.
+      </div>
+      <div class="dtab-content" data-group="soc">
+        <strong>🧩 التوحد:</strong> البدء بالتفاعل مع فرد واحد، تعلم النص الاجتماعي (Social Scripts)، اللعب الموازي قبل اللعب التفاعلي، الأنشطة ذات القواعد الواضحة (ألعاب لوحية)، الأقران المدربون على دعم التفاعل.
+      </div>
+      <div class="dtab-content" data-group="soc">
+        <strong>📖 صعوبات التعلم:</strong> أدوار قيادية تعزز الثقة، المجموعات التعاونية تخفف الضغط الفردي، الأنشطة التي تُبرز نقاط قوتهم وليس ضعفهم، تجنب المواقف التي تكشف الضعف الأكاديمي أمام الأقران.
+      </div>
+    </div>
+  </div>
+
+  <!-- أنشطة ثقافية -->
+  <div class="activity-section culture">
+    <div class="activity-title">📰 الأنشطة الثقافية</div>
+    <p style="margin-bottom:14px; line-height:1.8;">وهي كافة الأعمال التي تنمي المستوى الثقافي للفرد في جميع مجالات الحياة. تشمل الصحافة المدرسية، المكتبة، الإذاعة المدرسية، التصوير الضوئي، تحسين الخطوط. تنمي المعلومات والمعارف والخبرات وتوسع المدارك.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <span class="tag pink">📻 الإذاعة المدرسية</span>
+      <span class="tag pink">📚 المكتبة</span>
+      <span class="tag pink">📰 الصحافة المدرسية</span>
+      <span class="tag pink">📷 التصوير</span>
+      <span class="tag pink">✏️ تحسين الخطوط</span>
+    </div>
+  </div>
+
+  <!-- أنشطة سياسية -->
+  <div class="activity-section politics">
+    <div class="activity-title">🗳️ الأنشطة السياسية</div>
+    <p style="margin-bottom:14px; line-height:1.8;">وهي كافة الأعمال والأفعال التي يمارسها الفرد داخل أو خارج المؤسسات التعليمية لتنمية وعيه السياسي ومستوى مشاركته السياسية.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <span class="tag purple">🎤 تنظيم الندوات</span>
+      <span class="tag purple">🏛️ حضور المؤتمرات</span>
+      <span class="tag purple">🗳️ المشاركة في الاتحادات</span>
+      <span class="tag purple">📊 الأنشطة الانتخابية</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 3: تصنيفات الأنشطة ===== -->
+<div class="section" id="s3">
+  <div class="section-title">
+    <span class="section-emoji">🏗️</span>
+    المرحلة 3: تصنيفات الأنشطة التعليمية الكاملة
+  </div>
+
+  <div class="big-card">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">📊 التصنيف الأول: وفق دور الأنشطة في التعليم والتعلم</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>📖 أنشطة التعلم</h3>
+        <p>متطلبات وأعمال يقوم بها <strong>المتعلم وحده</strong> لمساعدته في اكتساب وتنمية خبراته. أكثر من مجرد ملاحظة واستماع:</p>
+        <ul>
+          <li>جمع معلومات وعينات</li>
+          <li>أداء تجارب</li>
+          <li>القيام بزيارات</li>
+          <li>قراءة كتب ومجلات</li>
+          <li>عمل بحوث</li>
+        </ul>
+      </div>
+      <div class="card blue">
+        <h3>🏫 أنشطة التعليم</h3>
+        <p>أعمال يقوم بها <strong>المعلم والمتعلم معاً</strong> داخل الحجرة الدراسية أو خارجها بهدف إضفاء المتعة والتشويق وتيسير نقل الخبرات.</p>
+        <ul>
+          <li>صفية وغير صفية</li>
+          <li>تدعم العملية التعليمية</li>
+          <li>تساعد على تحقيق الأهداف</li>
+          <li>جزء أساسي من المنهج</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-card">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">📍 التصنيف الثاني: وفق مكان الممارسة</h2>
+    <div class="cards-grid">
+      <div class="card green">
+        <h3>🏫 أنشطة صفية (داخل قاعة النشاط)</h3>
+        <p>تتم بصورة نظامية داخل قاعات النشاط في المؤسسات التعليمية. أمثلتها:</p>
+        <ul>
+          <li>عرض عملي أو تجربة</li>
+          <li>عرض شريط فيديو</li>
+          <li>مسابقة داخل القاعة</li>
+          <li>الدخول لمواقع الإنترنت</li>
+          <li>معمل الوسائط التعليمية</li>
+          <li>الأنشطة المعلمية (معامل العلوم، اللغات، الحسابات)</li>
+        </ul>
+      </div>
+      <div class="card orange">
+        <h3>🌳 أنشطة غير صفية (خارج القاعة)</h3>
+        <p>يقوم بها المعلم أو المتعلم بعيداً عن جدران القاعة لدعم الخبرات التعليمية بطريقة غير مباشرة. أمثلتها:</p>
+        <ul>
+          <li>القراءات الإضافية الحرة</li>
+          <li>الرحلات الحرة</li>
+          <li>الزيارات الميدانية</li>
+          <li>المشاريع خارج المدرسة</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-card">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">🎯 التصنيف الثالث: وفق الهدف من النشاط (9 أنواع)</h2>
+    <div class="cards-grid">
+      <div class="card" style="border-top-color:#7C3AED">
+        <h3>🔍 1. نشاط استدلالي</h3>
+        <p>يستهدف تدريب المتعلم على تجميع حقائق وأفكار جزئية واستقرائها للوصول إلى مبادئ عامة.</p>
+      </div>
+      <div class="card blue">
+        <h3>🗺️ 2. نشاط استكشافي (تنقيبي)</h3>
+        <p>يستهدف تدريب المتعلم على استكشاف المعلومات بنفسه واستقصاء أفكار ومشكلات لاكتساب خبرات جديدة.</p>
+      </div>
+      <div class="card green">
+        <h3>💡 3. نشاط استنتاجي</h3>
+        <p>يستهدف تدريب المتعلم على استنتاج الأفكار الجزئية وتفسيرها في ضوء مبادئ أو قوانين عامة. عكس الاستدلالي.</p>
+      </div>
+      <div class="card" style="border-top-color:#F59E0B">
+        <h3>🏋️ 4. نشاط تدريبي</h3>
+        <p>يهدف إلى التدريب على اكتساب وتنمية المهارات العقلية والعملية والاجتماعية كالعمل في فريق والتعاون.</p>
+      </div>
+      <div class="card orange">
+        <h3>⚙️ 5. نشاط لتنمية العمليات</h3>
+        <p>يستهدف تدريب المتعلم على ممارسة عمليات العلم كالملاحظة والتصنيف والقياس وإتقانها.</p>
+      </div>
+      <div class="card pink">
+        <h3>🤲 6. نشاط لتنمية المهارات</h3>
+        <p>يستهدف تدريب المتعلم على المهارات العملية واليدوية للتعامل مع الأجهزة والأدوات والمواد المعلمية.</p>
+      </div>
+      <div class="card purple">
+        <h3>📚 7. نشاط لتنمية المعارف</h3>
+        <p>يستهدف تدريب المتعلم على اكتساب المعارف والمعلومات المتنوعة في المجالات المختلفة ذات الصلة بالبرامج أو غيرها.</p>
+      </div>
+      <div class="card blue">
+        <h3>❤️ 8. نشاط لتنمية الميول والاتجاهات</h3>
+        <p>يستهدف تدريب المتعلم على تنمية الميول والاتجاهات والجوانب الوجدانية الإيجابية وتعديل السلبية.</p>
+      </div>
+      <div class="card green">
+        <h3>🎡 9. نشاط ترفيهي</h3>
+        <p>لا يستهدف تعليماً مباشراً، لكنه يتيح الفرصة للانطلاق والاستمتاع. جميع الأنشطة الترفيهية تنطوي على هدف تعليمي ضمني.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-card">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">📐 التصنيف الرابع: أسس إضافية متعددة للتصنيف</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>📏 1. قرب النشاط من الواقع</h3>
+        <p>يبدأ بأنشطة قريبة من الواقع (رحلات، تربية الحيوانات) وينتهي بالرموز اللفظية (اللغة المكتوبة).</p>
+      </div>
+      <div class="card blue">
+        <h3>📍 2. مكان النشاط</h3>
+        <p>داخل القاعة: بطاقات، عرض عملي، مناقشة. خارج القاعة: تربية النحل، مسرحيات، رحالت علمية (متحف، معرض، مصنع، مزرعة).</p>
+      </div>
+      <div class="card green">
+        <h3>👥 3. حجم المشاركين</h3>
+        <p>مجموعة دراسية كاملة أو مجموعات صغيرة مثل العمل في الأركان.</p>
+      </div>
+      <div class="card purple">
+        <h3>👁️👂✋ 4. الحواس المستخدمة</h3>
+        <p>سمعية (تسجيل صوتي). بصرية (صور ورسوم وأفلام). حركية (نماذج وتجارب علمية).</p>
+      </div>
+      <div class="card orange">
+        <h3>🎯 5. الهدف من النشاط</h3>
+        <p>معلومات ومفاهيم. تنمية مهارات عملية. أهداف وجدانية (كشف علمي، حياة عالم، نشاط درامي).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-card" style="background: linear-gradient(135deg, #FFFBEB, #fff);">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">🔄 الأنشطة العلاجية vs الأنشطة الإثرائية</h2>
+    <table class="compare-table">
+      <tr>
+        <th>المعيار</th>
+        <th>الأنشطة العلاجية (للضعيف)</th>
+        <th>الأنشطة الإثرائية (للموهوب)</th>
+      </tr>
+      <tr><td>المعرفة</td><td>مفاهيم أقل تعقيداً (المهارات الأساسية)</td><td>مفاهيم أكثر تعقيداً (مهارات عقلية عليا)</td></tr>
+      <tr><td>الوقت</td><td>تُعطى وقتاً أطول</td><td>تُعطى وقتاً أقصر</td></tr>
+      <tr><td>الخبرة والجهد</td><td>تُعطى جهداً وخبرة أفضل</td><td>تتطلب عملاً مستقلاً أكثر</td></tr>
+      <tr><td>المصادر</td><td>تُعطى مصادر أكثر</td><td>يحدد المتعلم مصادر المعرفة بنفسه</td></tr>
+      <tr><td>الخطوط العريضة</td><td>تتضمن خطوطاً عريضة واضحة</td><td>خطوط عريضة أقل وضوحاً</td></tr>
+      <tr><td>المدخلات</td><td>أنواع عديدة للمدخلات (صور، تقليد)</td><td>تتطلب التخيل والإبداع</td></tr>
+      <tr><td>التكرار</td><td>تتطلب إعادة وتكراراً</td><td>تتجنب الإعادة</td></tr>
+      <tr><td>التعزيز</td><td>تعزز العمل الجيد ضمن القدرة</td><td>تعزز العمل على مستوى عالٍ من القدرة</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== SECTION 4: الوسائل والتقنيات ===== -->
+<div class="section" id="s4">
+  <div class="section-title">
+    <span class="section-emoji">⚙️</span>
+    المرحلة 4: الوسائل التعليمية والتقنيات التربوية
+  </div>
+
+  <div class="info-banner">
+    <span class="ban-icon">🔗</span>
+    <p><strong>العلاقة بين الأنشطة والوسائل التعليمية:</strong> كلاهما من مكونات منظومة المنهج، يؤثر كل منهما ويتأثر بباقي المكونات. الأنشطة قد تحتاج وسائل تعليمية لتنفيذها، والوسائل قد تتطلب القيام بأنشطة لاستخدامها الأمثل.</p>
+  </div>
+
+  <div class="big-card">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">💻 التقنيات التربوية الخمس لنظام التعلم عن بُعد</h2>
+    <div class="tech-cards">
+      <div class="tech-card">
+        <div class="t-icon">📄</div>
+        <h4>1. المواد المطبوعة</h4>
+        <p>البرامج التعليمية، المجلات، المصورات، والكتب التعليمية</p>
+      </div>
+      <div class="tech-card">
+        <div class="t-icon">🔊</div>
+        <h4>2. تقنيات السمعيات</h4>
+        <p>الأشرطة والبث الإذاعي، الهواتف والاتصالات الصوتية</p>
+      </div>
+      <div class="tech-card">
+        <div class="t-icon">🖥️</div>
+        <h4>3. الرسوم الإلكترونية</h4>
+        <p>اللوحة الإلكترونية التفاعلية، الفاكس والبث المرئي</p>
+      </div>
+      <div class="tech-card">
+        <div class="t-icon">📺</div>
+        <h4>4. تقنيات الفيديو</h4>
+        <p>التليفزيون التربوي والعادي، الفيديو المتفاعل، أشرطة وأقراص الفيديو</p>
+      </div>
+      <div class="tech-card">
+        <div class="t-icon">🌐</div>
+        <h4>5. الحاسوب وشبكاته</h4>
+        <p>الحاسب التعليمي، البريد الإلكتروني، شبكة الإنترنت، الفيديو الرقمي</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-card">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">🎓 دور المعلم في بناء وتصميم الأنشطة التعليمية</h2>
+    <div class="info-banner" style="margin-bottom:20px;">
+      <span class="ban-icon">⚡</span>
+      <p>دور المعلم تغير جذرياً: من كونه "كل شيء" (يحضر النشاط، يشرح المعلومات، يستخدم الوسائل، يضع الاختبارات) إلى التخطيط والتنظيم والإشراف، والاعتماد على الحاسوب والإنترنت.</p>
+    </div>
+    <div class="roles-grid">
+      <div class="role-card" onclick="toggleRole(this)">
+        <div class="role-icon">📐</div>
+        <h4>1. تصميم التعليم</h4>
+        <p style="font-size:0.85rem; color:#6B7280;">اضغط للتفاصيل</p>
+        <div class="role-detail">
+          التعرف إلى احتياجات المتعلمين بدراسات عملية دقيقة، تحديد الحاجات الضرورية التي تهمهم، تشجيعهم على التفكير في الأنشطة المناسبة، اختيار النشاط بناءً على تحديد الحاجة، التخطيط والتنظيم ورسم خطة التنفيذ.
+        </div>
+      </div>
+      <div class="role-card" onclick="toggleRole(this)">
+        <div class="role-icon">💻</div>
+        <h4>2. توظيف التقنيات</h4>
+        <p style="font-size:0.85rem; color:#6B7280;">اضغط للتفاصيل</p>
+        <div class="role-detail">
+          استخدام تقنيات المعدات والأجهزة بفاعلية عند تقديم التعلم. توظيف الحاسوب والإنترنت والفيديو والأشرطة الصوتية والمواد المطبوعة بصورة متكاملة تخدم أهداف النشاط.
+        </div>
+      </div>
+      <div class="role-card" onclick="toggleRole(this)">
+        <div class="role-icon">🤝</div>
+        <h4>3. تشجيع التفاعل</h4>
+        <p style="font-size:0.85rem; color:#6B7280;">اضغط للتفاصيل</p>
+        <div class="role-detail">
+          تشجيع تفاعل المتعلمين مع بعضهم ومع المعلم ومع المادة. توجيه المتعلمين عند الحاجة دون التدخل الكبير. التأكد من مشاركة جميع الأطفال في مراحل التنفيذ.
+        </div>
+      </div>
+      <div class="role-card" onclick="toggleRole(this)">
+        <div class="role-icon">🧭</div>
+        <h4>4. تطوير التعلم الذاتي</h4>
+        <p style="font-size:0.85rem; color:#6B7280;">اضغط للتفاصيل</p>
+        <div class="role-detail">
+          دور المعلم الأساسي التخطيط لتوجيه المتعلمين ومساعدتهم على إعادة اكتشاف حقائق العلم. الابتعاد عن الدور التقليدي الإلقائي وعدم كونه وعاءً للمعلومات.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-card">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">📋 خطوات إعداد النشاط التعليمي</h2>
+    <div class="cards-grid">
+      <div style="background:#F5F3FF; border-radius:16px; padding:18px;">
+        <h3 style="font-size:1rem; font-weight:800; margin-bottom:12px; color:#5B21B6;">🗂️ العناصر الأساسية لخطة النشاط:</h3>
+        <ul style="padding-right:18px; line-height:2;">
+          <li><strong>نوع النشاط:</strong> لغوي / علمي / رياضي / بيئي / ...</li>
+          <li><strong>اسم النشاط</strong></li>
+          <li><strong>الأهداف الإجرائية (المؤشرات)</strong></li>
+          <li><strong>زمن النشاط</strong></li>
+          <li><strong>مكان النشاط</strong></li>
+          <li><strong>التقنيات التربوية المستخدمة</strong></li>
+          <li><strong>الأسلوب المستخدم</strong></li>
+          <li><strong>طريقة الأداء والتنفيذ (محتوى النشاط)</strong></li>
+          <li><strong>التعزيز المستخدم</strong></li>
+          <li><strong>التطبيق التربوي (التقييم)</strong></li>
+        </ul>
+      </div>
+      <div style="background:#F0FDF4; border-radius:16px; padding:18px;">
+        <h3 style="font-size:1rem; font-weight:800; margin-bottom:12px; color:#15803D;">✅ شروط النشاط الجيد:</h3>
+        <ul style="padding-right:18px; line-height:2;">
+          <li>الارتباط الوثيق بين النشاط والأهداف التعليمية</li>
+          <li>يضع في اعتباره جوانب النمو المختلفة</li>
+          <li>أهدافه متصلة بتنمية القدرات والمهارات والقيم</li>
+          <li>يراعي ميول الأطفال وقدراتهم</li>
+          <li>يستخدم خامات البيئة المحلية</li>
+          <li>مناسب للعمر العقلي والزمني للطفل</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 5: دورة التنفيذ ===== -->
+<div class="section" id="s5">
+  <div class="section-title">
+    <span class="section-emoji">⏰</span>
+    المرحلة 5: دورة تنفيذ النشاط - من التخطيط للتقويم
+  </div>
+
+  <div class="info-banner">
+    <span class="ban-icon">🚂</span>
+    <p>اضغط على كل خطوة لفتح تفاصيلها الأكاديمية الكاملة. هذا القسم يضمن حل أسئلة الترتيب والخطوات في الامتحان.</p>
+  </div>
+
+  <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:20px; color:#5B21B6;">⬆️ قبل التنفيذ — مرحلة التخطيط والإعداد</h3>
+  <div class="steps-train">
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s1">1</div>
+      <div class="step-body">
+        <div class="step-title">🔍 التعرف إلى احتياجات المتعلمين</div>
+        <div class="step-subtitle">دراسات عملية دقيقة ومعمّقة</div>
+        <div class="step-detail">
+          يتم بواسطة القيام بدراسات عملية دقيقة لفهم ما يحتاجه المتعلمون فعلاً. يشمل ذلك:<br>
+          • ملاحظة سلوك الأطفال في البيئة الطبيعية<br>
+          • مراجعة سجلات نمو الطفل<br>
+          • التواصل مع الأسرة لمعرفة الاهتمامات والصعوبات<br>
+          • استخدام أدوات التقييم التشخيصية المناسبة
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s1">2</div>
+      <div class="step-body">
+        <div class="step-title">📌 تحديد الحاجات الضرورية</div>
+        <div class="step-subtitle">الحاجات التي تشغل بال المتعلمين وتهمهم</div>
+        <div class="step-detail">
+          تحديد الحاجات الضرورية التي تهتم المتعلمين وتشغل بالهم ويهمهم الوصول إلى حلول مناسبة تساعد في إشباع ميولهم وتلبي احتياجاتهم. وهذه المرحلة تسبق الأهداف وتُعلم اختيار النشاط.
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s1">أ</div>
+      <div class="step-body">
+        <div class="step-title">📝 اختيار الأنشطة المناسبة للموقف التعليمي</div>
+        <div class="step-subtitle">قاعدة قبل التنفيذ (أ)</div>
+        <div class="step-detail">
+          اختيار الأنشطة المناسبة للموقف التعليمي التعلمي بناءً على:<br>
+          • تحديد الحاجة ومعرفة طرق إشباعها<br>
+          • مناسبة النشاط للعمر الزمني والعقلي للمتعلمين<br>
+          • التوافق مع أهداف المنهج<br>
+          • الارتباط الوثيق بالأهداف التعليمية الأساسية
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s1">ب</div>
+      <div class="step-body">
+        <div class="step-title">✅ التأكد من إمكانية تنفيذ النشاط</div>
+        <div class="step-subtitle">قاعدة قبل التنفيذ (ب)</div>
+        <div class="step-detail">
+          التأكد من إمكانية تنفيذ النشاط من حيث:<br>
+          • توفر الموارد والخامات اللازمة<br>
+          • مناسبة الوقت المتاح<br>
+          • قدرة الأطفال الجسدية والعقلية على تنفيذه<br>
+          • توفر المكان المناسب<br>
+          • سلامة الأدوات وعدم احتوائها على مخاطر
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s1">ت</div>
+      <div class="step-body">
+        <div class="step-title">🎒 تجهيز متطلبات تنفيذ النشاط</div>
+        <div class="step-subtitle">قاعدة قبل التنفيذ (ت)</div>
+        <div class="step-detail">
+          تجهيز جميع متطلبات تنفيذ النشاط قبل البدء مباشرةً:<br>
+          • الأدوات والخامات والمواد<br>
+          • الوسائل التعليمية المستخدمة<br>
+          • أوراق العمل وبطاقات النشاط<br>
+          • معدات التسجيل والتقييم
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s1">ث</div>
+      <div class="step-body">
+        <div class="step-title">🏠 تهيئة أماكن تنفيذ النشاط</div>
+        <div class="step-subtitle">قاعدة قبل التنفيذ (ث)</div>
+        <div class="step-detail">
+          تهيئة البيئة الفيزيقية لتنفيذ النشاط:<br>
+          • ترتيب الغرفة أو المكان المناسب<br>
+          • التأكد من السلامة والأمان<br>
+          • إزالة العوائق والمشتتات<br>
+          • توفير إضاءة وتهوية مناسبة<br>
+          • توزيع المقاعد والطاولات بما يخدم النشاط
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:1.2rem; font-weight:800; margin: 32px 0 20px; color:#DB2777;">▶️ أثناء التنفيذ — مرحلة التنفيذ الفعلي</h3>
+  <div class="steps-train">
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s2">أ</div>
+      <div class="step-body">
+        <div class="step-title">🎬 التمهيد لممارسة النشاط</div>
+        <div class="step-subtitle">المقدمة السحرية لجذب الانتباه</div>
+        <div class="step-detail">
+          التمهيد هو المدخل الجذاب للنشاط ويهدف لإثارة دافعية الأطفال:<br>
+          • قصة قصيرة مشوقة مرتبطة بموضوع النشاط<br>
+          • سؤال استفزازي يثير الفضول<br>
+          • عرض مادة أو صورة محفزة<br>
+          • ربط النشاط بخبرات الأطفال السابقة<br>
+          • أنشودة أو لعبة حركية كمقدمة
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s2">ب</div>
+      <div class="step-body">
+        <div class="step-title">⏱️ تنفيذ النشاط في التوقيت المناسب</div>
+        <div class="step-subtitle">إدارة الوقت بفاعلية</div>
+        <div class="step-detail">
+          الالتزام بالتوقيت المناسب يشمل:<br>
+          • اختيار وقت النشاط في ذروة انتباه الأطفال<br>
+          • عدم إطالة النشاط حتى يصاب الأطفال بالملل<br>
+          • توزيع الوقت بين مراحل النشاط<br>
+          • إعطاء كل طفل وقتاً كافياً للمشاركة
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s2">ت</div>
+      <div class="step-body">
+        <div class="step-title">📍 تنفيذ النشاط في المكان المناسب</div>
+        <div class="step-subtitle">البيئة الفيزيقية الداعمة</div>
+        <div class="step-detail">
+          المكان المناسب يعني:<br>
+          • مساحة كافية لحركة الأطفال<br>
+          • مناسبة المكان لنوع النشاط (حركي/هادئ)<br>
+          • غرفة النشاط للأنشطة الصفية<br>
+          • الفناء أو الحديقة للأنشطة الحركية<br>
+          • خارج المدرسة للرحلات والزيارات
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s2">ث</div>
+      <div class="step-body">
+        <div class="step-title">✨ عرض النشاط بأسلوب مشوق ومثير</div>
+        <div class="step-subtitle">الطريقة تصنع الفرق</div>
+        <div class="step-detail">
+          أسلوب تقديم النشاط يجب أن يكون:<br>
+          • مشوقاً ومثيراً للفضول<br>
+          • متدرجاً من البسيط للمعقد<br>
+          • متنوعاً لاستثارة حواس مختلفة<br>
+          • مناسباً لاحتياجات الأطفال المختلفة<br>
+          • مدعوماً بالحركة والإيماءات والتعابير
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s2">ج</div>
+      <div class="step-body">
+        <div class="step-title">🎯 التأكد من تفاعل المتعلمين خلال التنفيذ</div>
+        <div class="step-subtitle">المشاركة الفعلية لكل طفل</div>
+        <div class="step-detail">
+          مؤشرات التفاعل الإيجابي:<br>
+          • جميع الأطفال منهمكون في العمل<br>
+          • لا يوجد طفل يجلس خاملاً<br>
+          • الأسئلة والاستفسارات من الأطفال<br>
+          • التعبير الوجداني والانفعالي<br>
+          • التعاون العفوي بين الأطفال
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s2">ح</div>
+      <div class="step-body">
+        <div class="step-title">🙋 إتاحة الفرصة لمشاركة المتعلمين في مراحل التنفيذ</div>
+        <div class="step-subtitle">المشاركة الحقيقية لا الصورية</div>
+        <div class="step-detail">
+          المشاركة الحقيقية تعني:<br>
+          • توزيع الأدوار على جميع الأطفال<br>
+          • إشراكهم في اتخاذ القرارات البسيطة<br>
+          • السماح لهم بالتجربة والخطأ<br>
+          • تشجيع الأفكار الجديدة والمبدعة<br>
+          • عدم احتكار المعلمة لزمام النشاط
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s2">خ</div>
+      <div class="step-body">
+        <div class="step-title">⚖️ عدم ازدحام الموقف بعدد كبير من الأنشطة</div>
+        <div class="step-subtitle">التركيز والعمق لا الكم</div>
+        <div class="step-detail">
+          التنوع الزائد في الأنشطة يُشتت الانتباه. في الموقف التعليمي الواحد:<br>
+          • يُفضَّل نشاط واحد أو اثنان فقط متكاملان<br>
+          • التنسيق والتكامل بين الأنشطة المتعددة<br>
+          • عدم الضغط على المتعلم لممارسة النشاط قهراً<br>
+          • المرونة في التعديل حسب ردود أفعال الأطفال
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:1.2rem; font-weight:800; margin: 32px 0 20px; color:#16A34A;">📊 بعد التنفيذ — مرحلة التقويم والختام</h3>
+  <div class="steps-train">
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s4">أ</div>
+      <div class="step-body">
+        <div class="step-title">📊 تقويم الأنشطة للتعرف على مدى فعاليتها</div>
+        <div class="step-subtitle">القياس المنهجي للنتائج</div>
+        <div class="step-detail">
+          التقويم الشامل يشمل:<br>
+          • مقارنة النتائج بالأهداف المرسومة<br>
+          • استخدام بطاقات الملاحظة المنظمة<br>
+          • تقييم مستوى تحقق كل هدف (ممتاز/جيد/يحتاج دعماً)<br>
+          • رصد التغيرات في سلوك الأطفال<br>
+          • تقييم مستوى التفاعل والمشاركة
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s4">ب</div>
+      <div class="step-body">
+        <div class="step-title">⭐ تحديد الأنشطة الأكثر تفضيلاً لدى المتعلمين</div>
+        <div class="step-subtitle">قاعدة بيانات لتحسين التخطيط المستقبلي</div>
+        <div class="step-detail">
+          بناء قاعدة معرفة حول تفضيلات الأطفال:<br>
+          • ملاحظة الأنشطة التي يتحمسون لها أكثر<br>
+          • تدوين ردود أفعال كل طفل تجاه كل نشاط<br>
+          • استثمار هذه المعلومات في التخطيط القادم<br>
+          • مراعاة الفروق الفردية في التفضيلات
+        </div>
+      </div>
+    </div>
+    <div class="step-item" onclick="toggleStep(this)">
+      <div class="step-num s4">ت</div>
+      <div class="step-body">
+        <div class="step-title">📋 تسجيل تقارير النشاط في سجل الممارسة</div>
+        <div class="step-subtitle">التوثيق المنهجي لضمان الاستمرارية</div>
+        <div class="step-detail">
+          التوثيق الجيد يتضمن:<br>
+          • اسم النشاط وتاريخه ومكانه<br>
+          • الأهداف التي تحققت والتي لم تتحقق<br>
+          • ملاحظات على أداء كل طفل<br>
+          • التعديلات المقترحة للمرة القادمة<br>
+          • الأدوات والخامات المستخدمة<br>
+          • توصيات للدعم الفردي
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 6: معايير قومية ===== -->
+<div class="section" id="s6">
+  <div class="section-title">
+    <span class="section-emoji">📏</span>
+    المرحلة 6: المستويات المعيارية القومية للأنشطة التعليمية
+  </div>
+
+  <div class="info-banner">
+    <span class="ban-icon">🏛️</span>
+    <p>جاءت المستويات المعيارية وفق <strong>مشروع المعايير القومية للتعليم بمصر</strong> (وزارة التربية والتعليم، 2003م). وهي أربعة معايير كبرى يجب أن تستوفيها جميع أنشطة التعليم والتعلم.</p>
+  </div>
+
+  <div class="standards-grid">
+    <div class="standard-card">
+      <h3>🔗 المعيار الأول: استناد الأنشطة لمفهوم وحدة المعرفة</h3>
+      <ul>
+        <li>تسهم في تعزيز المفاهيم الشاملة للمعرفة وتنميتها</li>
+        <li>تتيح مواقف لتأكيد التكامل بين مجالات المعرفة</li>
+        <li>ترتبط بالحاجات المهنية والقضايا الاجتماعية</li>
+        <li>تساعد الأطفال في بناء مدركاتهم عبر تطبيق المعرفة وتحليلها</li>
+        <li>تتناول مشكلات معرفية واقعية</li>
+      </ul>
+    </div>
+    <div class="standard-card">
+      <h3>🧠 المعيار الثاني: شمول الأنشطة لعمليات التفكير المختلفة</h3>
+      <ul>
+        <li>ترتبط بالمعرفة القبلية للأطفال وخبراتهم وميولهم</li>
+        <li>تقدم نموذجاً لممارسة مهارات التفكير والبحث</li>
+        <li>تؤكد مشاركة الأطفال لتفعيل التفكير وحل المشكلات</li>
+        <li>تتيح الفرصة للسلوك التعاوني والمناقشات الصفية</li>
+        <li>تتيح الفرص للتوجيه الذاتي والتعلم التأملي</li>
+      </ul>
+    </div>
+    <div class="standard-card">
+      <h3>🏫 المعيار الثالث: تصميم وإدارة بيئة تعلم فعالة</h3>
+      <ul>
+        <li>توفر مناخاً آمناً يسوده العدل والاحترام والتعزيز</li>
+        <li>تحدد ضوابط لسلوك الأطفال داخل القاعة</li>
+        <li>تساعد على توظيف الوقت لممارسة الأنشطة بشكل فعال</li>
+      </ul>
+    </div>
+    <div class="standard-card">
+      <h3>📊 المعيار الرابع: التقييم المستمر والفعال</h3>
+      <ul>
+        <li>تستخدم أساليب ومصادر متنوعة للمعلومات لتقييم التعلم</li>
+        <li>تجمع الأدلة حول تعلم الأطفال وتحلل البيانات</li>
+        <li>تُشرك الأطفال في تقييم تعلمهم (التقييم الذاتي والأصيل)</li>
+        <li>تعتمد على المناقشات مع الزملاء والإدارة لتحسين الممارسات</li>
+        <li>تتطلب إعداد تقارير عن أداء الأطفال لاتخاذ القرار</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="big-card" style="margin-top:24px;">
+    <h2 style="font-size:1.3rem; font-weight:900; margin-bottom:20px;">🎯 المستويات المعيارية التفصيلية الإضافية</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>🎭 أنشطة اللغات</h3>
+        <ul>
+          <li>قراءة كتب ومجلات وصحف</li>
+          <li>حضور أمسيات شعرية</li>
+          <li>تمثيل الأدوار اللغوية</li>
+          <li>مسابقات لغوية</li>
+          <li>زيارة متاحف لغوية</li>
+          <li>مشاريع محو الأمية</li>
+        </ul>
+      </div>
+      <div class="card blue">
+        <h3>🔬 أنشطة العلوم</h3>
+        <ul>
+          <li>تجارب معملية</li>
+          <li>زيارة حدائق الحيوانات</li>
+          <li>جمع عينات وتصبيرها</li>
+          <li>تربية بعض الحيوانات</li>
+          <li>تصنيع مواد منزلية</li>
+          <li>مشاريع حماية البيئة</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h3>🔢 أنشطة الرياضيات</h3>
+        <ul>
+          <li>ألعاب الأرقام</li>
+          <li>حل الألغاز الرياضية</li>
+          <li>الرسوم الهندسية</li>
+          <li>برمجيات الكمبيوتر الإحصائية</li>
+          <li>مسابقات الرياضيات</li>
+          <li>رسم اللوحات الحسابية</li>
+        </ul>
+      </div>
+      <div class="card purple">
+        <h3>🌍 أنشطة المفاهيم الاجتماعية</h3>
+        <ul>
+          <li>جمع العملات التاريخية</li>
+          <li>جمع تسجيلات أحداث تاريخية</li>
+          <li>رسم الخرائط</li>
+          <li>استخدام الأطلس</li>
+          <li>رصد الأحداث السياسية</li>
+          <li>تصميم نماذج الكرة الأرضية</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 7: امتحان الفاينال ===== -->
+<div class="section" id="s7">
+  <div class="section-title">
+    <span class="section-emoji">💥</span>
+    المرحلة 7: امتحان الفاينال — محاكاة أكاديمية شديدة
+  </div>
+
+  <div class="info-banner">
+    <span class="ban-icon">⚠️</span>
+    <p>10 أسئلة أكاديمية عميقة تعتمد على الفهم والتطبيق. اضغط على الإجابة لتعرف الصواب فوراً مع التبرير الأكاديمي التفصيلي من كتاب الدكتورة سماح مرزوق.</p>
+  </div>
+
+  <div class="quiz-wrap" id="quizWrap">
+
+    <!-- Q1 MCQ -->
+    <div class="quiz-q" id="q1">
+      <div class="q-label">سؤال 1 — اختيار من متعدد</div>
+      <div class="q-text">🧠 طفل يعاني من إعاقة سمعية في روضة التربية الخاصة. أيُّ أنواع الأنشطة التعليمية الأنسب له بشكل مبدئي وفق توجيهات الكتاب؟</div>
+      <div class="q-options">
+        <button class="q-opt" onclick="answerMCQ(this,'q1',false)">أ) الأنشطة الموسيقية الغنائية الصوتية المركزة</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q1',true)">ب) الأنشطة الفنية البصرية والتشكيلية</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q1',false)">ج) الأنشطة اللغوية الشفهية المكثفة</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q1',false)">د) الأنشطة الثقافية الإذاعية فقط</button>
+      </div>
+      <div class="feedback-box correct" id="q1-fb">
+        ✅ <strong>الإجابة الصحيحة: (ب)</strong><br><br>
+        وفق مبدأ تكييف الأنشطة لكل إعاقة، فإن المعاق سمعياً يعاني من خلل في القناة السمعية، لذا فإن الأنشطة الفنية البصرية والتشكيلية هي الأنسب لأنها:<br>
+        1. لا تعتمد على القناة السمعية<br>
+        2. تعوّض التعبير اللفظي بالتعبير البصري<br>
+        3. تبني ثقة الطفل بنفسه<br>
+        الأنشطة الموسيقية الصوتية وحدها غير ملائمة، أما الإيقاع عبر الاهتزاز فيمكن توظيفه بتكييف مناسب.
+      </div>
+    </div>
+
+    <!-- Q2 MCQ -->
+    <div class="quiz-q" id="q2">
+      <div class="q-label">سؤال 2 — اختيار من متعدد</div>
+      <div class="q-text">📚 وفق الكتاب، ما الركن الذي تمثله الأنشطة التعليمية في منظومة المنهج؟ وماذا تجيب الأنشطة من أسئلة المنهج؟</div>
+      <div class="q-options">
+        <button class="q-opt" onclick="answerMCQ(this,'q2',false)">أ) الركن الأول — تجيب عن: لماذا نعلم؟</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q2',false)">ب) الركن الثاني — تجيب عن: ماذا نعلم؟</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q2',true)">ج) الركن الرابع — تجيب عن: كيف نعلم وكيف نتعلم؟</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q2',false)">د) الركن الثالث — تجيب عن: هل تحققت الأهداف؟</button>
+      </div>
+      <div class="feedback-box correct" id="q2-fb">
+        ✅ <strong>الإجابة الصحيحة: (ج)</strong><br><br>
+        نص الكتاب صراحةً: "الأنشطة التعليمية تمثل الركن الرابع من أركان المنهج" والأركان هي:<br>
+        • الأهداف: تجيب لماذا نعلم؟<br>
+        • المحتوى: تجيب ماذا نعلم؟<br>
+        • <strong>الأنشطة: تجيب كيف نعلم؟ وكيف نتعلم؟</strong><br>
+        • التقويم: تجيب هل تحققت الأهداف؟
+      </div>
+    </div>
+
+    <!-- Q3 MCQ -->
+    <div class="quiz-q" id="q3">
+      <div class="q-label">سؤال 3 — اختيار من متعدد</div>
+      <div class="q-text">🔬 أي من المعايير التالية يجب أن تستوفيه الأنشطة التعليمية وفق مشروع المعايير القومية للتعليم بمصر (2003)؟</div>
+      <div class="q-options">
+        <button class="q-opt" onclick="answerMCQ(this,'q3',false)">أ) أن تُنجَز الأنشطة في أسرع وقت ممكن</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q3',true)">ب) أن تتضمن مكوناً أساسياً لتقييم تعلم الأطفال بصورة مستمرة وفعالة</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q3',false)">ج) أن يُنفذها المعلم منفرداً دون إشراك الأطفال</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q3',false)">د) أن تقتصر على الأنشطة داخل الفصل الدراسي فقط</button>
+      </div>
+      <div class="feedback-box correct" id="q3-fb">
+        ✅ <strong>الإجابة الصحيحة: (ب)</strong><br><br>
+        المعيار الرابع من المعايير القومية ينص على: "أن تتضمن الأنشطة مكوناً أساسياً لتقييم تعلم الأطفال وأنشطة التعليم بصورة مستمرة وفعالة" ويشمل:<br>
+        • أساليب ومصادر متنوعة للتقييم<br>
+        • جمع الأدلة حول تعلم الأطفال<br>
+        • إشراك الأطفال في التقييم الذاتي والأصيل<br>
+        • إعداد تقارير عن أداء الأطفال
+      </div>
+    </div>
+
+    <!-- Q4 MCQ -->
+    <div class="quiz-q" id="q4">
+      <div class="q-label">سؤال 4 — اختيار من متعدد</div>
+      <div class="q-text">⚖️ ما الفرق الجوهري بين الأنشطة العلاجية والأنشطة الإثرائية وفق الكتاب؟</div>
+      <div class="q-options">
+        <button class="q-opt" onclick="answerMCQ(this,'q4',false)">أ) الأنشطة العلاجية تُعطى وقتاً أقصر والإثرائية وقتاً أطول</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q4',false)">ب) الأنشطة الإثرائية تحتوي على مفاهيم أقل تعقيداً</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q4',true)">ج) الأنشطة العلاجية تُعطى وقتاً أطول وتعتمد على خطوط عريضة واضحة، بينما الإثرائية تتطلب عملاً مستقلاً أكثر ومهارات عقلية عليا</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q4',false)">د) الأنشطة العلاجية مخصصة للموهوبين فقط</button>
+      </div>
+      <div class="feedback-box correct" id="q4-fb">
+        ✅ <strong>الإجابة الصحيحة: (ج)</strong><br><br>
+        وفق مقارنة الكتاب الصريحة:<br>
+        <strong>العلاجية:</strong> تُعطى وقتاً أطول + خطوط عريضة واضحة + مفاهيم أقل تعقيداً (المهارات الأساسية) + تتطلب إعادة وتكراراً<br>
+        <strong>الإثرائية:</strong> تُعطى وقتاً أقصر + خطوط أقل وضوحاً + مفاهيم أكثر تعقيداً (مهارات عقلية عليا) + تتطلب عملاً مستقلاً + تتجنب الإعادة + تتطلب التخيل
+      </div>
+    </div>
+
+    <!-- Q5 MCQ -->
+    <div class="quiz-q" id="q5">
+      <div class="q-label">سؤال 5 — اختيار من متعدد</div>
+      <div class="q-text">🎓 وفق الكتاب، ما الوظيفتان الأساسيتان اللتان تؤديهما الأنشطة التعليمية للمتعلمين؟</div>
+      <div class="q-options">
+        <button class="q-opt" onclick="answerMCQ(this,'q5',false)">أ) التقييم وإعداد التقارير</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q5',true)">ب) إشباع حاجات المتعلمين + اكتساب المعلومات والاتجاهات والقيم والمهارات</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q5',false)">ج) تنظيم الفصل وضبط السلوك</button>
+        <button class="q-opt" onclick="answerMCQ(this,'q5',false)">د) تحقيق التفوق الأكاديمي فقط</button>
+      </div>
+      <div class="feedback-box correct" id="q5-fb">
+        ✅ <strong>الإجابة الصحيحة: (ب)</strong><br><br>
+        نص الكتاب حرفياً: "الأنشطة التعليمية تؤدي وظيفتين أساسيتين للمتعلمين:<br>
+        1. <strong>الوظيفة الأولى:</strong> تُشبع حاجات المتعلمين<br>
+        2. <strong>الوظيفة الثانية:</strong> وسيلة يكتسب من خلالها المتعلمون المعلومات والاتجاهات والقيم والمهارات"<br>
+        لذا يجب بناء الأنشطة بالشكل الذي يحقق هاتين الوظيفتين الأساسيتين.
+      </div>
+    </div>
+
+    <!-- Q6 T/F -->
+    <div class="quiz-q" id="q6">
+      <div class="q-label">سؤال 6 — صح أم خطأ</div>
+      <div class="q-text">📖 "الأنشطة التعليمية الصفية وغير الصفية كلاهما يدعم العملية التعليمية ويساعد على تحقيق أهدافها بدرجة متساوية، ولا فرق بينهما."</div>
+      <div class="tf-options">
+        <button class="tf-btn true-btn" onclick="answerTF(this,'q6',false)">✅ صح</button>
+        <button class="tf-btn false-btn" onclick="answerTF(this,'q6',true)">❌ خطأ</button>
+      </div>
+      <div class="feedback-box wrong" id="q6-fb">
+        ❌ <strong>خطأ</strong><br><br>
+        الجملة الأولى صحيحة (كلاهما يدعم العملية) لكن الخطأ في قول "لا فرق بينهما". الكتاب يوضح الفروق الجوهرية:<br>
+        • <strong>الصفية:</strong> تتم بصورة نظامية داخل القاعة (تجارب، عروض، مسابقات داخلية، إنترنت في المعمل)<br>
+        • <strong>غير الصفية:</strong> تتم خارج الجدران (قراءات حرة، رحلات، زيارات) وتدعم الخبرات التعليمية بطريقة غير مباشرة<br>
+        لكل منهما طبيعتها وأساليبها وأمثلتها وسياقات توظيفها.
+      </div>
+    </div>
+
+    <!-- Q7 T/F -->
+    <div class="quiz-q" id="q7">
+      <div class="q-label">سؤال 7 — صح أم خطأ</div>
+      <div class="q-text">🧩 "نوع النشاط الترفيهي وفق الكتاب لا يستهدف أي هدف تعليمي أو تثقيفي أو تدريبي على الإطلاق، وهو مجرد لهو بلا فائدة."</div>
+      <div class="tf-options">
+        <button class="tf-btn true-btn" onclick="answerTF(this,'q7',false)">✅ صح</button>
+        <button class="tf-btn false-btn" onclick="answerTF(this,'q7',true)">❌ خطأ</button>
+      </div>
+      <div class="feedback-box wrong" id="q7-fb">
+        ❌ <strong>خطأ</strong><br><br>
+        الكتاب ينص صراحةً: "النشاط الترفيهي لا يستهدف تعليماً أو تثقيفاً أو تدريباً بشكل مباشر، إلا أن <strong>معظم الأنشطة الترفيهية بل جميعها ينطوي على هدف تعليمي أو تثقيفي أو تدريبي غير معلن أو غير مقصود</strong>".<br>
+        مثال الكتاب: مدينة الملاهي — يمارس الفرد ألعاباً مختلفة فيستمتع لكنه يتعلم دون قصد الكثير عن كل لعبة.
+      </div>
+    </div>
+
+    <!-- Q8 T/F -->
+    <div class="quiz-q" id="q8">
+      <div class="q-label">سؤال 8 — صح أم خطأ</div>
+      <div class="q-text">🎯 "وفق معايير قواعد تنفيذ الأنشطة، يجوز للمعلم أن يجبر ويضغط على المتعلم لممارسة نشاط معين إذا كان النشاط مفيداً له."</div>
+      <div class="tf-options">
+        <button class="tf-btn true-btn" onclick="answerTF(this,'q8',false)">✅ صح</button>
+        <button class="tf-btn false-btn" onclick="answerTF(this,'q8',true)">❌ خطأ</button>
+      </div>
+      <div class="feedback-box wrong" id="q8-fb">
+        ❌ <strong>خطأ</strong><br><br>
+        من قواعد التنفيذ المنصوص عليها في الكتاب صراحةً:<br>
+        <strong>"ذ- عدم الضغط على المتعلم كي يمارس النشاط قهراً"</strong><br><br>
+        هذه القاعدة تستند إلى الأسس النفسية للأنشطة التعليمية التي تشترط أن تكون المشاركة طوعية وعن قصد، لأن الإكراه يؤدي إلى نتائج عكسية ويدمر الدافعية والتفاعل الإيجابي.
+      </div>
+    </div>
+
+    <!-- Q9 T/F -->
+    <div class="quiz-q" id="q9">
+      <div class="q-label">سؤال 9 — صح أم خطأ</div>
+      <div class="q-text">📊 "وفق المعيار الأول للأنشطة التعليمية (وحدة المعرفة)، يجب أن تُنفَّذ كل أنشطة التعليم والتعلم بمعزل تام عن بعضها دون ربطها بمجالات المعرفة الأخرى."</div>
+      <div class="tf-options">
+        <button class="tf-btn true-btn" onclick="answerTF(this,'q9',false)">✅ صح</button>
+        <button class="tf-btn false-btn" onclick="answerTF(this,'q9',true)">❌ خطأ</button>
+      </div>
+      <div class="feedback-box wrong" id="q9-fb">
+        ❌ <strong>خطأ</strong><br><br>
+        المعيار الأول يشترط العكس تماماً: "أن تستند أنشطة التعليم والتعلم إلى مفهوم وحدة المعرفة"، وهذا يعني:<br>
+        • تعزيز المفاهيم الشاملة وتنميتها<br>
+        • <strong>إتاحة مواقف لتأكيد التكامل بين مجالات المعرفة المختلفة</strong><br>
+        • ربط الأنشطة بالقضايا الاجتماعية والحاجات المهنية<br>
+        أي أن المطلوب التكامل المعرفي وليس العزل.
+      </div>
+    </div>
+
+    <!-- Q10 T/F -->
+    <div class="quiz-q" id="q10">
+      <div class="q-label">سؤال 10 — صح أم خطأ</div>
+      <div class="q-text">🔄 "الوظيفة النفسية للأنشطة التعليمية تتمثل أساساً في استثارة الدافعية وقتل الملل والروتين في حياة المتعلم، مما يساعد على التفاعل الإيجابي مع المعلم والمتعلمين."</div>
+      <div class="tf-options">
+        <button class="tf-btn true-btn" onclick="answerTF(this,'q10',true)">✅ صح</button>
+        <button class="tf-btn false-btn" onclick="answerTF(this,'q10',false)">❌ خطأ</button>
+      </div>
+      <div class="feedback-box correct" id="q10-fb">
+        ✅ <strong>صح</strong><br><br>
+        نص الكتاب: "تعتبر عملية اكتساب المتعلمين اتجاهات إيجابية مرغوبة من الأهداف الرئيسية للعملية التعليمية، لذلك فإن استثارة الدافعية وقتل الملل والروتين في حياة المتعلم مما يساعد كثيراً على التفاعل الإيجابي مع المعلم والمتعلمين وكل ذلك من الأمور التي تؤدي إلى تحسين عملية التعليم والتعلم."<br>
+        وهذا هو المقصود بالوظيفة النفسية للأنشطة التعليمية.
+      </div>
+    </div>
+
+    <div class="score-box" id="scoreBox">
+      <h2 id="scoreText">🎉 نتيجتك</h2>
+      <p id="scoreDesc"></p>
+    </div>
+
+    <button class="quiz-reset-btn" onclick="resetQuiz()">🔄 إعادة الامتحان من الأول</button>
+  </div>
+</div>
+
+<div style="text-align:center; padding:32px 20px; color:#6B7280; font-size:0.9rem; background:#fff; margin-top:32px;">
+  📚 ملخص الفصل الرابع — الأنشطة التعليمية لذوي الاحتياجات الخاصة<br>
+  أ.د/ سماح عبد الفتاح مرزوق | التدريب الميداني في التربية الخاصة
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const idx = ['s1','s2','s3','s4','s5','s6','s7'].indexOf(id);
+  document.querySelectorAll('.nav-tab')[idx].classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleAdapt(btn) {
+  const panel = btn.nextElementSibling;
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', !isOpen);
+  btn.textContent = isOpen ? '🔄 كيف نُكيّف هذا النشاط لكل إعاقة؟' : '🔼 إخفاء التكييفات';
+}
+
+function showDtab(btn, group) {
+  const panel = btn.closest('.adapt-panel');
+  panel.querySelectorAll('.dtab').forEach(t => t.classList.remove('active'));
+  panel.querySelectorAll('.dtab-content[data-group="'+group+'"]').forEach((c,i) => {
+    c.classList.remove('active');
+  });
+  btn.classList.add('active');
+  const idx = Array.from(panel.querySelectorAll('.dtab')).indexOf(btn);
+  const contents = panel.querySelectorAll('.dtab-content[data-group="'+group+'"]');
+  if (contents[idx]) contents[idx].classList.add('active');
+}
+
+function toggleStep(el) {
+  el.classList.toggle('open');
+  const detail = el.querySelector('.step-detail');
+  if (detail) detail.classList.toggle('open');
+}
+
+function toggleRole(el) {
+  el.classList.toggle('open');
+  const detail = el.querySelector('.role-detail');
+  if (detail) detail.classList.toggle('open');
+}
+
+let score = 0;
+let answered = 0;
+const total = 10;
+
+function answerMCQ(btn, qid, isCorrect) {
+  const q = document.getElementById(qid);
+  if (q.dataset.answered) return;
+  q.dataset.answered = '1';
+  answered++;
+  const opts = q.querySelectorAll('.q-opt');
+  opts.forEach(o => {
+    o.classList.add('answered');
+    o.style.pointerEvents = 'none';
+  });
+  const fb = document.getElementById(qid + '-fb');
+  if (isCorrect) {
+    btn.classList.add('correct');
+    fb.classList.remove('wrong'); fb.classList.add('correct');
+    score++;
+  } else {
+    btn.classList.add('wrong');
+    fb.classList.remove('correct'); fb.classList.add('wrong');
+    opts.forEach(o => {
+      if (o.onclick.toString().includes('true')) o.classList.add('show-correct');
+    });
+  }
+  fb.classList.add('open');
+  if (answered === total) showScore();
+}
+
+function answerTF(btn, qid, isCorrect) {
+  const q = document.getElementById(qid);
+  if (q.dataset.answered) return;
+  q.dataset.answered = '1';
+  answered++;
+  const btns = q.querySelectorAll('.tf-btn');
+  btns.forEach(b => { b.classList.add('answered'); b.style.pointerEvents = 'none'; });
+  const fb = document.getElementById(qid + '-fb');
+  if (isCorrect) {
+    btn.classList.add('correct');
+    fb.classList.remove('wrong'); fb.classList.add('correct');
+    score++;
+  } else {
+    btn.classList.add('wrong');
+    fb.classList.remove('correct'); fb.classList.add('wrong');
+  }
+  fb.classList.add('open');
+  if (answered === total) showScore();
+}
+
+function showScore() {
+  const sb = document.getElementById('scoreBox');
+  sb.style.display = 'block';
+  const pct = Math.round((score/total)*100);
+  let emoji, desc;
+  if (pct === 100) { emoji = '🏆'; desc = 'ممتاز! أتقنت الفصل الرابع بالكامل'; }
+  else if (pct >= 80) { emoji = '🥇'; desc = 'جيد جداً! مستوى متميز في المادة'; }
+  else if (pct >= 60) { emoji = '🥈'; desc = 'جيد! راجع بعض الفقرات لتعزيز فهمك'; }
+  else { emoji = '📖'; desc = 'راجع الفصل من الأول ثم أعد الاختبار'; }
+  document.getElementById('scoreText').textContent = emoji + ' ' + score + ' / ' + total + ' (' + pct + '%)';
+  document.getElementById('scoreDesc').textContent = desc;
+  sb.scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+
+function resetQuiz() {
+  score = 0; answered = 0;
+  const qids = ['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10'];
+  qids.forEach(id => {
+    const q = document.getElementById(id);
+    delete q.dataset.answered;
+    q.querySelectorAll('.q-opt, .tf-btn').forEach(b => {
+      b.className = b.classList.contains('tf-btn') ?
+        (b.classList.contains('true-btn') ? 'tf-btn true-btn' : 'tf-btn false-btn') : 'q-opt';
+      b.style.pointerEvents = '';
+    });
+    const fb = document.getElementById(id + '-fb');
+    fb.classList.remove('open');
+  });
+  document.getElementById('scoreBox').style.display = 'none';
+  window.scrollTo({top: document.getElementById('s7').offsetTop - 100, behavior: 'smooth'});
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.adapt-panel').forEach(panel => {
+    const group = panel.querySelector('.dtab-content');
+    if (group) group.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
